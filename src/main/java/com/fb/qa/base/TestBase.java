@@ -37,7 +37,7 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			FileInputStream ipf = new FileInputStream(
-					"C:\\Users\\muhammad.jabbar\\eclipse-workspace\\fbProject\\src\\main\\java\\com\\fb\\qa\\config\\config.properties");
+					"C:\\Users\\Jabbar's\\eclipse-workspace\\FnBProject\\src\\main\\java\\com\\fb\\qa\\config\\config.properties");
 			prop.load(ipf);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -50,7 +50,7 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		if (browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\muhammad.jabbar\\eclipse-workspace\\FBProject\\chromedriver.exe");
+					"C:\\Users\\Jabbar's\\eclipse-workspace\\FnBProject\\chromedriver.exe");
 			System.setProperty("webdriver.http.factory", "jdk-http-client");
 			driver = new ChromeDriver();
 		}
@@ -78,7 +78,7 @@ public class TestBase {
 			File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			try {
 				FileUtils.copyFile(srcFile,
-						new File("C:\\Users\\muhammad.jabbar\\eclipse-workspace\\fbProject\\screenshots\\"
+						new File("C:\\Users\\Jabbar's\\eclipse-workspace\\FnBProject\\screenshots"
 								+ testMethodName + ".jpg"));
 			} catch (IOException e) {
 				e.printStackTrace();
